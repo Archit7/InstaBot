@@ -4,9 +4,10 @@ import requests
 from textblob import TextBlob
 from textblob.sentiments import NaiveBayesAnalyzer
 
-
+# function to delete a comment by post id and comment id
 def delete_negative_comment(insta_username):
     media_id = get_post_id(insta_username)
+    # takes input from the user for comment id to be deleted
     request_url = (BASE_URL + 'media/%s/comments/?access_token=%s') % (media_id, APP_ACCESS_TOKEN)
     print 'GET request url : %s' % (request_url)
     comment_info = requests.get(request_url).json()
