@@ -1,6 +1,6 @@
 import requests
 from constants import APP_ACCESS_TOKEN, BASE_URL
-
+# function to print personal instagram information
 def self_info():
     #logic of the function
     request_url = (BASE_URL + 'users/self/?access_token=%s') % (APP_ACCESS_TOKEN)
